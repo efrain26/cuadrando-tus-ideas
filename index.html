@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <!-- ── SEO ────────────────────────────────────────────── -->
+  <title>Tu Empresa — Soluciones Industriales y Construcción</title>
+  <meta name="description" content="Descripción breve de tu empresa. Especialistas en [sector], ofrecemos soluciones integrales de calidad." />
+
+  <!-- ── Open Graph ─────────────────────────────────────── -->
+  <meta property="og:title"       content="Tu Empresa — Soluciones Industriales" />
+  <meta property="og:description" content="Descripción breve de tu empresa para redes sociales." />
+  <meta property="og:image"       content="assets/images/og-image.jpg" />
+  <meta property="og:image:alt"   content="Tu Empresa" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://tudominio.com/" />
+  <meta property="og:locale"      content="es_MX" />
+
+  <!-- ── Twitter Card ───────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Tu Empresa — Soluciones Industriales" />
+  <meta name="twitter:description" content="Descripción breve de tu empresa." />
+  <meta name="twitter:image"       content="assets/images/og-image.jpg" />
+
+  <!-- ── Favicon ────────────────────────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- ── Estilos ────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Estilos de animación fade-in -->
+  <style>
+    [data-fade] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    [data-fade].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+
+      <!-- Logo (reemplaza img por tu logo real) -->
+      <a href="#" class="navbar__logo" aria-label="Ir al inicio">
+        <!-- OPCIÓN A: logo imagen -->
+        <!-- <img src="assets/images/logo.png" alt="Logo Tu Empresa" /> -->
+
+        <!-- OPCIÓN B: texto con acento de color -->
+        <span>Tu<em>Empresa</em></span>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav class="navbar__menu" aria-label="Menú principal">
+
+        <div class="navbar__item">
+          <a href="#inicio"   class="navbar__link">Inicio</a>
+        </div>
+
+        <!-- Ítem con dropdown -->
+        <div class="navbar__item">
+          <a href="#servicios" class="navbar__link">Servicios</a>
+          <div class="navbar__dropdown" role="menu">
+            <a href="#servicios" class="navbar__dropdown-link" role="menuitem">Servicio 1</a>
+            <a href="#servicios" class="navbar__dropdown-link" role="menuitem">Servicio 2</a>
+            <a href="#servicios" class="navbar__dropdown-link" role="menuitem">Servicio 3</a>
+          </div>
+        </div>
+
+        <div class="navbar__item">
+          <a href="#nosotros"  class="navbar__link">Nosotros</a>
+        </div>
+        <div class="navbar__item">
+          <a href="#equipo"    class="navbar__link">Equipo</a>
+        </div>
+        <div class="navbar__item">
+          <a href="#contacto"  class="navbar__link">Contacto</a>
+        </div>
+      </nav>
+
+      <!-- Hamburguesa (móvil) -->
+      <button class="navbar__hamburger"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="main-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main id="inicio">
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO PRINCIPAL
+         Cambia el background-image por tu foto real
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero hero--primary"
+             style="background-image: url('assets/images/hero-main.jpg');"
+             aria-label="Banner principal">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Soluciones Integrales<br />para tu Proyecto
+        </h1>
+        <p class="hero__subtitle">
+          Desde el diseño hasta la entrega final. Calidad, experiencia y
+          compromiso en cada obra.
+        </p>
+        <div class="hero__actions">
+          <a href="#servicios" class="btn btn--primary">Ver Servicios</a>
+          <a href="#contacto"  class="btn btn--secondary">Contáctanos</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO SECUNDARIO (CTA intermedio)
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero hero--secondary"
+             style="background-image: url('assets/images/hero-secondary.jpg');"
+             aria-label="Propuesta de valor">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h2 class="hero__title" style="font-size:2rem;">
+          Más de 8 años siendo la solución<br />que tu empresa necesita
+        </h2>
+        <p class="hero__subtitle">
+          Todos nuestros proyectos son llave en mano. Te acompañamos en cada etapa.
+        </p>
+        <a href="#contacto" class="btn btn--primary">Solicitar Cotización</a>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         MISIÓN Y VISIÓN
+    ══════════════════════════════════════════════════════ -->
+    <section id="nosotros" class="section section--white">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">Quiénes Somos</span>
+          <h2 class="section__title">Misión & Visión</h2>
+          <p class="section__subtitle">
+            Conoce los valores que guían cada proyecto que emprendemos.
+          </p>
+        </div>
+
+        <div class="mission-grid" data-fade>
+          <div class="mission-card">
+            <div class="mission-card__icon" aria-hidden="true">🎯</div>
+            <h3 class="mission-card__title">Nuestra Misión</h3>
+            <p class="mission-card__text">
+              Proporcionar soluciones integrales de alta calidad a nuestros clientes,
+              entregando proyectos a tiempo, dentro del presupuesto y superando
+              sus expectativas en cada etapa del proceso.
+            </p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-card__icon" aria-hidden="true">🔭</div>
+            <h3 class="mission-card__title">Nuestra Visión</h3>
+            <p class="mission-card__text">
+              Ser la empresa líder en nuestro sector, reconocida por la excelencia
+              en la ejecución de proyectos, la innovación constante y el impacto
+              positivo en las comunidades donde operamos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SERVICIOS
+    ══════════════════════════════════════════════════════ -->
+    <section id="servicios" class="section section--light">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">Lo que hacemos</span>
+          <h2 class="section__title">Nuestros Servicios</h2>
+          <p class="section__subtitle">
+            Ofrecemos un portafolio completo de servicios adaptados a las
+            necesidades de tu proyecto.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- ── CARD SERVICIO — copia y pega este bloque para agregar más ── -->
+          <article class="card" data-fade>
+            <img class="card__image"
+                 src="assets/images/servicio-1.jpg"
+                 alt="Descripción del Servicio 1"
+                 loading="lazy" />
+            <div class="card__body">
+              <h3 class="card__title">Servicio 1</h3>
+              <p class="card__text">
+                Descripción breve del servicio. Explica qué incluye y el
+                beneficio principal para el cliente.
+              </p>
+              <a href="#contacto" class="card__link">Conoce Más →</a>
+            </div>
+          </article>
+          <!-- ── FIN CARD ── -->
+
+          <article class="card" data-fade>
+            <img class="card__image"
+                 src="assets/images/servicio-2.jpg"
+                 alt="Descripción del Servicio 2"
+                 loading="lazy" />
+            <div class="card__body">
+              <h3 class="card__title">Servicio 2</h3>
+              <p class="card__text">
+                Descripción breve del servicio. Explica qué incluye y el
+                beneficio principal para el cliente.
+              </p>
+              <a href="#contacto" class="card__link">Conoce Más →</a>
+            </div>
+          </article>
+
+          <article class="card" data-fade>
+            <img class="card__image"
+                 src="assets/images/servicio-3.jpg"
+                 alt="Descripción del Servicio 3"
+                 loading="lazy" />
+            <div class="card__body">
+              <h3 class="card__title">Servicio 3</h3>
+              <p class="card__text">
+                Descripción breve del servicio. Explica qué incluye y el
+                beneficio principal para el cliente.
+              </p>
+              <a href="#contacto" class="card__link">Conoce Más →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         DIFERENCIALES
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">¿Por qué elegirnos?</span>
+          <h2 class="section__title">¿Qué nos hace diferentes?</h2>
+        </div>
+
+        <div class="differentials-grid">
+
+          <!-- ── BLOQUE DIFERENCIAL — copia para agregar más ── -->
+          <div class="differential" data-fade>
+            <span class="differential__icon" aria-hidden="true">🏗️</span>
+            <h3 class="differential__title">Servicio Integral</h3>
+            <p class="differential__text">
+              Te apoyamos en cada fase del proyecto, de principio a fin.
+            </p>
+          </div>
+
+          <div class="differential" data-fade>
+            <span class="differential__icon" aria-hidden="true">✅</span>
+            <h3 class="differential__title">Calidad Garantizada</h3>
+            <p class="differential__text">
+              Cuidamos cada detalle para entregar resultados que superen
+              tus expectativas.
+            </p>
+          </div>
+
+          <div class="differential" data-fade>
+            <span class="differential__icon" aria-hidden="true">📞</span>
+            <h3 class="differential__title">Apoyo Constante</h3>
+            <p class="differential__text">
+              Comunicación permanente durante todo el proceso de tu proyecto.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         CTA BANNER
+    ══════════════════════════════════════════════════════ -->
+    <div class="cta-banner" data-fade>
+      <div class="cta-banner__inner">
+        <h2 class="cta-banner__title">
+          ¿Listo para iniciar tu proyecto?<br />
+          <em>Hablemos hoy mismo.</em>
+        </h2>
+        <a href="#contacto" class="btn btn--primary">Enviar WhatsApp</a>
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         CLIENTES / LOGOS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">Ellos confían en nosotros</span>
+          <h2 class="section__title">Nuestros Clientes</h2>
+        </div>
+      </div>
+
+      <!-- Marquee de logos — duplica la lista para efecto continuo -->
+      <div class="clients" aria-label="Empresas clientes">
+        <div class="clients__track">
+          <!-- Agrega tus logos aquí — duplícalos para el efecto continuo -->
+          <img class="clients__logo" src="assets/images/cliente-1.png" alt="Cliente 1" />
+          <img class="clients__logo" src="assets/images/cliente-2.png" alt="Cliente 2" />
+          <img class="clients__logo" src="assets/images/cliente-3.png" alt="Cliente 3" />
+          <img class="clients__logo" src="assets/images/cliente-4.png" alt="Cliente 4" />
+          <img class="clients__logo" src="assets/images/cliente-5.png" alt="Cliente 5" />
+          <!-- Duplicado para el loop continuo -->
+          <img class="clients__logo" src="assets/images/cliente-1.png" alt="Cliente 1" aria-hidden="true" />
+          <img class="clients__logo" src="assets/images/cliente-2.png" alt="Cliente 2" aria-hidden="true" />
+          <img class="clients__logo" src="assets/images/cliente-3.png" alt="Cliente 3" aria-hidden="true" />
+          <img class="clients__logo" src="assets/images/cliente-4.png" alt="Cliente 4" aria-hidden="true" />
+          <img class="clients__logo" src="assets/images/cliente-5.png" alt="Cliente 5" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         EQUIPO (OPCIONAL — eliminar si no aplica)
+    ══════════════════════════════════════════════════════ -->
+    <section id="equipo" class="section section--white">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">Las personas detrás</span>
+          <h2 class="section__title">Nuestro Equipo</h2>
+          <p class="section__subtitle">
+            Profesionales comprometidos con la excelencia en cada proyecto.
+          </p>
+        </div>
+
+        <div class="team-grid">
+
+          <!-- ── TARJETA DE EQUIPO — copia para cada miembro ── -->
+          <div class="team-card" data-fade>
+            <img class="team-card__photo"
+                 src="assets/images/equipo-1.jpg"
+                 alt="Foto de Nombre del Colaborador" />
+            <h3 class="team-card__name">Nombre Apellido</h3>
+            <p class="team-card__role">Director General</p>
+          </div>
+
+          <div class="team-card" data-fade>
+            <img class="team-card__photo"
+                 src="assets/images/equipo-2.jpg"
+                 alt="Foto de Nombre del Colaborador" />
+            <h3 class="team-card__name">Nombre Apellido</h3>
+            <p class="team-card__role">Director de Operaciones</p>
+          </div>
+
+          <div class="team-card" data-fade>
+            <img class="team-card__photo"
+                 src="assets/images/equipo-3.jpg"
+                 alt="Foto de Nombre del Colaborador" />
+            <h3 class="team-card__name">Nombre Apellido</h3>
+            <p class="team-card__role">Jefe de Proyectos</p>
+          </div>
+
+          <div class="team-card" data-fade>
+            <img class="team-card__photo"
+                 src="assets/images/equipo-4.jpg"
+                 alt="Foto de Nombre del Colaborador" />
+            <h3 class="team-card__name">Nombre Apellido</h3>
+            <p class="team-card__role">Coordinadora Comercial</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         CONTACTO
+         Formulario apunta a Formspree — cambia YOUR_ID
+    ══════════════════════════════════════════════════════ -->
+    <section id="contacto" class="section section--dark">
+      <div class="container">
+
+        <div class="section__header" data-fade>
+          <span class="section__label">Hablemos</span>
+          <h2 class="section__title">Contáctanos</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info lateral -->
+          <div class="contact-info" data-fade>
+            <h3 class="contact-info__title">¿Tienes un proyecto en mente?</h3>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">📞</span>
+              <div>
+                <p class="contact-info__label">Teléfono</p>
+                <a class="contact-info__value"
+                   href="tel:+521234567890">+52 (123) 456-7890</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">✉️</span>
+              <div>
+                <p class="contact-info__label">Correo</p>
+                <a class="contact-info__value"
+                   href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">🕐</span>
+              <div>
+                <p class="contact-info__label">Horario</p>
+                <p class="contact-info__value">Lun – Vie: 9:00 a.m. – 6:30 p.m.</p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">📍</span>
+              <div>
+                <p class="contact-info__label">Dirección</p>
+                <p class="contact-info__value">
+                  Calle Ejemplo 123, Colonia Centro<br />
+                  Ciudad, Estado. C.P. 00000
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info__socials">
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+                 class="contact-info__social" aria-label="Facebook">f</a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+                 class="contact-info__social" aria-label="Instagram">in</a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                 class="contact-info__social" aria-label="LinkedIn">Li</a>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <!-- IMPORTANTE: cambia YOUR_FORMSPREE_ID por tu ID real de formspree.io -->
+          <form class="form"
+                action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                method="POST"
+                data-fade
+                novalidate>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="nombre">Nombre *</label>
+                <input class="form__input"
+                       type="text"
+                       id="nombre"
+                       name="nombre"
+                       placeholder="Tu nombre completo"
+                       required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="correo">Correo *</label>
+                <input class="form__input"
+                       type="email"
+                       id="correo"
+                       name="correo"
+                       placeholder="tu@correo.com"
+                       required />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="servicio">Servicio de interés</label>
+              <select class="form__select" id="servicio" name="servicio">
+                <option value="" disabled selected>Selecciona un servicio…</option>
+                <option value="servicio-1">Servicio 1</option>
+                <option value="servicio-2">Servicio 2</option>
+                <option value="servicio-3">Servicio 3</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="mensaje">Mensaje *</label>
+              <textarea class="form__textarea"
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Cuéntanos sobre tu proyecto…"
+                        required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit">
+              Enviar Mensaje
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer section--footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <!-- Columna 1: Logo + dirección -->
+      <div>
+        <a href="#inicio" class="footer__logo" aria-label="Ir al inicio">
+          Tu<em>Empresa</em>
+        </a>
+        <address class="footer__address">
+          Calle Ejemplo 123, Colonia Centro<br />
+          Ciudad, Estado. C.P. 00000<br />
+          <a href="tel:+521234567890">+52 (123) 456-7890</a>
+        </address>
+      </div>
+
+      <!-- Columna 2: Links rápidos -->
+      <div>
+        <h4 class="footer__heading">Navegación</h4>
+        <nav class="footer__links" aria-label="Links rápidos">
+          <a href="#nosotros"  class="footer__link">Nosotros</a>
+          <a href="#servicios" class="footer__link">Servicios</a>
+          <a href="#equipo"    class="footer__link">Equipo</a>
+          <a href="#contacto"  class="footer__link">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- Columna 3: Redes sociales -->
+      <div>
+        <h4 class="footer__heading">Síguenos</h4>
+        <div class="footer__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="Facebook">f</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="Instagram">in</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="LinkedIn">Li</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer__divider" />
+    <p class="footer__copyright">
+      &copy; <span id="footer-year"></span> TuEmpresa. Todos los derechos reservados.
+    </p>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       BOTÓN FLOTANTE WHATSAPP
+  ══════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/521234567890?text=Hola,%20me%20gustaría%20más%20información"
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <!-- Ícono WhatsApp SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
+               -.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075
+               -.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059
+               -.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52
+               .149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52
+               -.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51
+               -.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372
+               -.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074
+               .149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625
+               .712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413
+               .248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.5
+               a.5.5 0 0 0 .613.635l5.757-1.51A11.943 11.943 0 0 0 12 24
+               c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22
+               c-1.891 0-3.663-.516-5.179-1.415l-.371-.22-3.818 1.001.975-3.77
+               -.236-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2
+               s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* ============================================================
+   VARIABLES GLOBALES — Design System
+   Basado en: design-system-grupojas.json
+   ============================================================ */
+
+:root {
+  /* --- Colores --- */
+  --color-primary:      #1A2B4A;
+  --color-accent:       #F5A623;
+  --color-white:        #FFFFFF;
+  --color-bg-light:     #F4F4F4;
+  --color-text:         #4A4A4A;
+  --color-text-light:   #CCCCCC;
+  --color-footer-bg:    #111827;
+  --color-overlay:      rgba(0, 0, 0, 0.55);
+
+  /* --- Tipografía --- */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body:    'Open Sans', sans-serif;
+
+  --text-xs:   0.8rem;
+  --text-sm:   0.9rem;
+  --text-base: 0.95rem;
+  --text-lg:   1.25rem;
+  --text-xl:   2rem;
+  --text-2xl:  3rem;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  --leading-tight:  1.1;
+  --leading-snug:   1.3;
+  --leading-normal: 1.7;
+
+  /* --- Espaciado (base 8px) --- */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* --- Layout --- */
+  --container-width: 1200px;
+  --section-padding: 80px 24px;
+  --navbar-height:   70px;
+
+  /* --- Efectos --- */
+  --radius:     4px;
+  --shadow:     0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md:  0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition: all 0.25s ease;
+}

@@ -1,0 +1,318 @@
+{
+  "design_system": {
+    "meta": {
+      "source": "https://www.grupojas.com/",
+      "industry": "construcción / servicios industriales",
+      "style_archetype": "corporativo-industrial confiable",
+      "tone": "serio, profesional, robusto, orientado a resultados",
+      "target_audience": "empresas del sector privado e industrial, tomadores de decisiones B2B"
+    },
+
+    "color_palette": {
+      "description": "Paleta de alto contraste basada en azul oscuro corporativo, blanco limpio y amarillo/naranja como acento de acción. Patrón típico de empresas constructoras e industriales.",
+      "primary": {
+        "name": "Azul corporativo oscuro",
+        "hex": "#1A2B4A",
+        "usage": "header, navbar, fondos de secciones destacadas, footer"
+      },
+      "secondary": {
+        "name": "Amarillo/naranja acento",
+        "hex": "#F5A623",
+        "usage": "botones CTA, hover states, highlights, iconos activos"
+      },
+      "neutral_light": {
+        "name": "Blanco puro",
+        "hex": "#FFFFFF",
+        "usage": "fondos de secciones alternas, texto sobre fondo oscuro, tarjetas"
+      },
+      "neutral_mid": {
+        "name": "Gris claro",
+        "hex": "#F4F4F4",
+        "usage": "fondos alternos de secciones, separadores visuales"
+      },
+      "neutral_dark": {
+        "name": "Gris texto",
+        "hex": "#4A4A4A",
+        "usage": "cuerpo de texto, descripciones en tarjetas"
+      },
+      "overlay": {
+        "name": "Negro semitransparente",
+        "rgba": "rgba(0, 0, 0, 0.55)",
+        "usage": "overlay sobre hero image para legibilidad del texto"
+      }
+    },
+
+    "typography": {
+      "description": "Jerarquía tipográfica clara. Display sans-serif bold para títulos de impacto, sans-serif regular para cuerpo. Sin serifa. Lectura fácil en pantallas.",
+      "font_families": {
+        "display": {
+          "name": "Montserrat",
+          "fallback": "sans-serif",
+          "weights": [700, 800],
+          "usage": "H1, H2, títulos de sección, nombre de empresa en hero"
+        },
+        "body": {
+          "name": "Open Sans",
+          "fallback": "sans-serif",
+          "weights": [400, 600],
+          "usage": "párrafos, descripciones de servicios, formularios, footer"
+        }
+      },
+      "scale": {
+        "h1": { "size": "3rem", "weight": 800, "line_height": 1.1, "transform": "none", "context": "título principal hero" },
+        "h2": { "size": "2rem", "weight": 700, "line_height": 1.2, "transform": "none", "context": "títulos de sección" },
+        "h3": { "size": "1.25rem", "weight": 700, "line_height": 1.3, "context": "subtítulos de sección, diferenciales" },
+        "h4": { "size": "1rem", "weight": 600, "line_height": 1.4, "context": "títulos de tarjetas de servicio" },
+        "body": { "size": "0.95rem", "weight": 400, "line_height": 1.7, "context": "descripción general" },
+        "small": { "size": "0.8rem", "weight": 400, "line_height": 1.5, "context": "etiquetas, meta, footer info" },
+        "cta_button": { "size": "0.9rem", "weight": 700, "transform": "uppercase", "letter_spacing": "0.08em" }
+      }
+    },
+
+    "layout": {
+      "container_max_width": "1200px",
+      "container_padding": "0 24px",
+      "section_padding_vertical": "80px",
+      "grid_system": "CSS Grid + Flexbox",
+      "breakpoints": {
+        "mobile": "< 768px",
+        "tablet": "768px - 1024px",
+        "desktop": "> 1024px"
+      },
+      "column_patterns": {
+        "services_grid": "repeat(3, 1fr) → repeat(2, 1fr) en tablet → 1fr en móvil",
+        "differentials": "repeat(3, 1fr) en desktop",
+        "contact_section": "sidebar info + formulario (2 columnas)",
+        "footer": "logo + links + redes (3 columnas → stack en móvil)"
+      }
+    },
+
+    "page_structure": {
+      "sections_order": [
+        "navbar",
+        "hero_primary",
+        "hero_secondary",
+        "services_grid",
+        "differentials",
+        "cta_banner",
+        "clients_logos_carousel",
+        "contact_section",
+        "footer"
+      ],
+      "section_alternation": "fondos alternos blanco / gris claro para separar visualmente secciones sin usar bordes"
+    },
+
+    "components": {
+
+      "navbar": {
+        "position": "fixed o sticky top",
+        "background": "color primary oscuro (#1A2B4A) con leve transparencia en scroll",
+        "height": "70px",
+        "logo": "imagen a la izquierda, altura máx 50px",
+        "nav_links": {
+          "color": "#FFFFFF",
+          "font_weight": 600,
+          "font_size": "0.9rem",
+          "hover_color": "#F5A623",
+          "spacing": "gap: 28px",
+          "active_indicator": "color acento o underline"
+        },
+        "dropdown": {
+          "trigger": "hover sobre ítem padre",
+          "background": "#1A2B4A",
+          "border_top": "3px solid #F5A623"
+        },
+        "mobile": {
+          "hamburger": true,
+          "menu_type": "drawer vertical full-width",
+          "breakpoint": "768px"
+        }
+      },
+
+      "hero": {
+        "type": "full-width background image con overlay oscuro",
+        "min_height": "85vh primer hero, 60vh segundo hero",
+        "overlay": "rgba(0,0,0,0.55)",
+        "text_color": "#FFFFFF",
+        "title_size": "h1 bold",
+        "subtitle_size": "h4 regular",
+        "cta_button": {
+          "style": "filled primary",
+          "position": "centrado debajo del texto"
+        },
+        "text_alignment": "center",
+        "vertical_alignment": "center"
+      },
+
+      "service_card": {
+        "layout": "vertical (imagen arriba, texto abajo)",
+        "image": {
+          "aspect_ratio": "16:9 o 4:3",
+          "object_fit": "cover",
+          "hover_effect": "leve zoom o brightness"
+        },
+        "body": {
+          "padding": "20px",
+          "background": "#FFFFFF",
+          "border_bottom": "3px solid #F5A623 (en hover o siempre)"
+        },
+        "title": "h4 bold, color primario oscuro",
+        "description": "body text, color gris",
+        "cta_link": {
+          "text": "Conoce Más",
+          "style": "bold, color acento, sin subrayado por defecto, underline en hover"
+        },
+        "shadow": "box-shadow sutil: 0 4px 12px rgba(0,0,0,0.08)",
+        "border_radius": "4px"
+      },
+
+      "differential_block": {
+        "layout": "icono arriba + título + texto breve",
+        "icon": "SVG o emoji simple, color acento #F5A623",
+        "title": "h3 bold color primario",
+        "text": "body color gris",
+        "alignment": "center",
+        "background": "gris claro o blanco dependiendo de la sección"
+      },
+
+      "cta_banner": {
+        "background": "color primario oscuro (#1A2B4A) o imagen con overlay",
+        "text_color": "#FFFFFF",
+        "layout": "texto a la izquierda + botón a la derecha (flex row)",
+        "button_style": "filled acento (#F5A623), texto oscuro"
+      },
+
+      "clients_carousel": {
+        "type": "fila horizontal con scroll automático o estático",
+        "items": "logos en escala de grises, color en hover",
+        "background": "#FFFFFF o #F4F4F4",
+        "item_spacing": "48px",
+        "layout": "flex wrap o CSS scroll marquee"
+      },
+
+      "contact_section": {
+        "layout": "2 columnas: info lateral + formulario",
+        "background": "#1A2B4A (oscuro)",
+        "text_color": "#FFFFFF",
+        "info_block": {
+          "items": ["teléfono", "email", "horario", "dirección", "redes sociales"],
+          "icon_color": "#F5A623"
+        },
+        "form": {
+          "fields": ["nombre", "correo", "servicio (select)", "mensaje (textarea)"],
+          "input_style": {
+            "background": "rgba(255,255,255,0.1)",
+            "border": "1px solid rgba(255,255,255,0.3)",
+            "border_radius": "4px",
+            "color": "#FFFFFF",
+            "padding": "12px 16px",
+            "focus_border": "#F5A623"
+          },
+          "submit_button": {
+            "background": "#F5A623",
+            "color": "#1A2B4A",
+            "font_weight": 700,
+            "padding": "14px 32px",
+            "border_radius": "4px",
+            "hover": "brightness 110% o background más oscuro"
+          }
+        }
+      },
+
+      "footer": {
+        "background": "#111827",
+        "text_color": "#CCCCCC",
+        "layout": "3 columnas: logo+dirección / links rápidos / redes sociales",
+        "divider": "1px solid rgba(255,255,255,0.1)",
+        "copyright": {
+          "font_size": "0.8rem",
+          "color": "#888888",
+          "alignment": "center",
+          "border_top": "1px solid rgba(255,255,255,0.08)"
+        },
+        "link_hover_color": "#F5A623"
+      },
+
+      "whatsapp_floating_button": {
+        "position": "fixed bottom-right",
+        "background": "#25D366",
+        "icon": "WhatsApp SVG blanco",
+        "size": "56px",
+        "border_radius": "50%",
+        "shadow": "0 4px 16px rgba(0,0,0,0.25)",
+        "z_index": 9999
+      }
+    },
+
+    "buttons": {
+      "primary": {
+        "background": "#F5A623",
+        "color": "#1A2B4A",
+        "border": "none",
+        "border_radius": "4px",
+        "padding": "14px 32px",
+        "font_weight": 700,
+        "font_size": "0.9rem",
+        "text_transform": "uppercase",
+        "letter_spacing": "0.08em",
+        "hover": { "filter": "brightness(1.1)", "transform": "translateY(-2px)" },
+        "transition": "all 0.25s ease"
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#FFFFFF",
+        "border": "2px solid #FFFFFF",
+        "border_radius": "4px",
+        "padding": "12px 30px",
+        "font_weight": 700,
+        "hover": { "background": "#FFFFFF", "color": "#1A2B4A" }
+      },
+      "text_link": {
+        "color": "#F5A623",
+        "font_weight": 700,
+        "text_decoration": "none",
+        "hover": { "text_decoration": "underline" }
+      }
+    },
+
+    "spacing_system": {
+      "unit": "8px",
+      "scale": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "40px",
+        "2xl": "64px",
+        "3xl": "96px"
+      }
+    },
+
+    "visual_patterns": {
+      "section_dividers": "alternancia de fondo (blanco / gris) sin líneas visibles",
+      "image_treatment": "fotografías reales de obra/proyectos, no ilustraciones",
+      "icon_style": "lineales o rellenos simples, monocolor, acento amarillo",
+      "shadow_style": "sutil, box-shadow difuso (no dramático)",
+      "border_radius_global": "4px (levemente redondeado, no circular)",
+      "animation_style": "fade-in on scroll, hover suave en tarjetas y botones",
+      "overlay_pattern": "hero y CTA banners siempre con overlay oscuro sobre foto"
+    },
+
+    "css_variables_template": {
+      "--color-primary": "#1A2B4A",
+      "--color-accent": "#F5A623",
+      "--color-white": "#FFFFFF",
+      "--color-bg-light": "#F4F4F4",
+      "--color-text": "#4A4A4A",
+      "--color-text-light": "#CCCCCC",
+      "--color-footer-bg": "#111827",
+      "--font-display": "'Montserrat', sans-serif",
+      "--font-body": "'Open Sans', sans-serif",
+      "--radius": "4px",
+      "--shadow": "0 4px 12px rgba(0,0,0,0.08)",
+      "--transition": "all 0.25s ease",
+      "--container-width": "1200px",
+      "--section-padding": "80px 24px"
+    }
+  }
+}

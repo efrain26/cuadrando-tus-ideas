@@ -1,0 +1,198 @@
+/* ============================================================
+   RESPONSIVE — Mobile First
+   Breakpoints: mobile < 768px | tablet 768-1024px | desktop > 1024px
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   TABLET (≤ 1024px)
+   ------------------------------------------------------------ */
+@media (max-width: 1024px) {
+
+  :root {
+    --text-2xl: 2.2rem;
+    --text-xl:  1.7rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .differentials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__inner > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-xl);
+  }
+
+  .cta-banner__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   MÓVIL (≤ 768px)
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+  :root {
+    --text-2xl: 1.8rem;
+    --text-xl:  1.4rem;
+    --section-padding: 56px 20px;
+    --navbar-height: 64px;
+  }
+
+  /* Navbar */
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    padding: var(--space-md) 0 var(--space-xl);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  .navbar__menu.open {
+    display: flex;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: var(--space-md) var(--space-xl);
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+
+  .navbar__dropdown {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    border-left: 3px solid var(--color-accent);
+    margin-left: var(--space-xl);
+    padding: 0;
+  }
+
+  .navbar__item:hover .navbar__dropdown {
+    display: block;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero--primary   { min-height: 70vh; }
+  .hero--secondary { min-height: 50vh; }
+
+  .hero__title    { font-size: 1.7rem; }
+  .hero__subtitle { font-size: 0.95rem; }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Grillas */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .differentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contacto */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* CTA banner */
+  .cta-banner__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .cta-banner__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* WhatsApp */
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   MÓVIL PEQUEÑO (≤ 480px)
+   ------------------------------------------------------------ */
+@media (max-width: 480px) {
+
+  :root {
+    --text-2xl: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
