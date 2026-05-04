@@ -46,18 +46,19 @@
   const navLinks = document.querySelectorAll('.navbar__link[href^="#"]');
 
   function setActiveLink() {
-    const scrollY = window.scrollY + 100;
+    const scrollY = window.scrollY + 150;
+
+    // Encontrar la sección más cercana por encima del scroll actual
+    let currentId = 'inicio';
 
     sections.forEach(section => {
-      const top    = section.offsetTop;
-      const bottom = top + section.offsetHeight;
-      const id     = section.getAttribute('id');
-
-      if (scrollY >= top && scrollY < bottom) {
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
+      if (scrollY >= section.offsetTop) {
+        currentId = section.getAttribute('id');
       }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
     });
   }
 

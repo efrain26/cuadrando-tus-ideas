@@ -83,6 +83,30 @@ ol {
   padding: 0 var(--space-lg);
 }
 
+/* ── Quiénes Somos ── */
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-content strong {
+  color: var(--color-primary);
+  font-weight: var(--weight-bold);
+}
+
 /* ── Cabecera de sección ── */
 
 .section__header {
