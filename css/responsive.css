@@ -154,9 +154,18 @@
   }
 
   /* Footer */
+  .footer {
+    padding: var(--space-xl) var(--space-md);
+  }
+
   .footer__inner {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  .footer__copyright {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 
   /* CTA banner */
