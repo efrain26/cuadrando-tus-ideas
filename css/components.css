@@ -458,7 +458,7 @@
 }
 
 .clients__logo {
-  height: 48px;
+  height: 72px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.5);
