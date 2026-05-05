@@ -291,6 +291,15 @@
   transform: translateY(-4px);
 }
 
+.card__icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+  background: var(--color-bg-light);
+}
+
 .card__image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -351,7 +360,7 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
 }
 
