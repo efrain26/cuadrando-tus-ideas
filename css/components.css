@@ -240,8 +240,65 @@
 
 
 /* ------------------------------------------------------------
-   4. TARJETA DE SERVICIO
-   ------------------------------------------------------------ */
+    4. HERO PROYECTOS
+    ------------------------------------------------------------ */
+
+.hero-projects {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  padding-top: var(--navbar-height);
+}
+
+.hero-projects__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay);
+  z-index: 1;
+}
+
+.hero-projects__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.hero-projects__logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: var(--space-xl);
+  border-radius: var(--radius);
+}
+
+.hero-projects__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-md);
+}
+
+.hero-projects__subtitle {
+  font-size: 1.1rem;
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------
+    5. TARJETA DE SERVICIO
+    ------------------------------------------------------------ */
 
 .card {
   background: var(--color-white);
@@ -322,13 +379,79 @@
 
 
 /* ------------------------------------------------------------
-   5. GRILLA DE SERVICIOS
-   ------------------------------------------------------------ */
+    6. GRILLA DE SERVICIOS
+    ------------------------------------------------------------ */
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
+}
+
+
+/* ------------------------------------------------------------
+    7. GRID DE PROYECTOS
+    ------------------------------------------------------------ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card__image img {
+  filter: brightness(1.05);
+  transform: scale(1.03);
+}
+
+.project-card__body {
+  padding: var(--space-lg);
+  border-bottom: 3px solid transparent;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card__body {
+  border-bottom-color: var(--color-accent);
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__text {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: var(--leading-normal);
 }
 
 

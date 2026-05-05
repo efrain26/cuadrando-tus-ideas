@@ -124,9 +124,13 @@
   }
 
   /* Grillas */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+   .services-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   .projects-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
 
   .differentials-grid {
     grid-template-columns: 1fr;
@@ -187,10 +191,19 @@
     --text-2xl: 1.5rem;
   }
 
-  .services-grid,
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
+   .services-grid,
+   .team-grid,
+   .projects-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .hero-projects__logo {
+     width: 140px;
+   }
+
+   .hero-projects__title {
+     font-size: 1.5rem;
+   }
 
   .btn {
     width: 100%;

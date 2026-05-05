@@ -51,14 +51,14 @@
   <header class="navbar" role="banner">
     <div class="navbar__inner">
 
-      <!-- Logo (reemplaza img por tu logo real) -->
-      <a href="#" class="navbar__logo" aria-label="Ir al inicio">
-        <!-- OPCIÓN A: logo imagen -->
-        <!-- <img src="assets/images/logo.png" alt="Logo Tu Empresa" /> -->
+       <!-- Logo (reemplaza img por tu logo real) -->
+       <a href="#inicio" class="navbar__logo" aria-label="Ir al inicio">
+         <!-- OPCIÓN A: logo imagen -->
+         <!-- <img src="assets/images/logo.png" alt="Logo Tu Empresa" /> -->
 
-        <!-- OPCIÓN B: texto con acento de color -->
-        <span>CUADRANDO<em>TUS IDEAS</em></span>
-      </a>
+         <!-- OPCIÓN B: texto con acento de color -->
+         <span>CUADRANDO<em>TUS IDEAS</em></span>
+       </a>
 
       <!-- Menú de navegación -->
       <nav class="navbar__menu" aria-label="Menú principal">
@@ -76,6 +76,9 @@
           <a href="#servicios" class="navbar__link">Servicios</a>
         </div>
 
+        <div class="navbar__item">
+          <a href="#proyectos-preview" class="navbar__link">Proyectos</a>
+        </div>
 
         <div class="navbar__item">
           <a href="#contacto"  class="navbar__link">Contacto</a>
@@ -325,13 +328,34 @@
 
         </div>
       </div>
+     </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         PROYECTOS PREVIEW
+    ══════════════════════════════════════════════════════ -->
+    <section id="proyectos-preview" class="section section--light">
+      <div class="container">
+        <div class="section__header" data-fade">
+          <span class="section__label">Portafolio</span>
+          <h2 class="section__title">Nuestros Proyectos</h2>
+          <p class="section__subtitle">
+            Conoce algunos de los trabajos que hemos desarrollado<br />
+            con excelencia y compromiso
+          </p>
+        </div>
+
+        <div data-fade style="text-align: center; margin-top: var(--space-xl);">
+          <a href="proyectos.html" class="btn btn--primary">Ver Proyectos</a>
+        </div>
+      </div>
     </section>
 
 
     <!-- ══════════════════════════════════════════════════════
          DIFERENCIALES
     ══════════════════════════════════════════════════════ -->
-    <section class="section section--white">
+    <section id="diferenciales" class="section section--white">
       <div class="container">
         <div class="section__header" data-fade>
           <span class="section__label">¿Por qué elegirnos?</span>
@@ -368,12 +392,12 @@
 
         </div>
       </div>
-    </section>
+     </section>
 
 
-    <!-- ══════════════════════════════════════════════════════
+    <!-- ════════════════════════════════════════════════════
          CTA BANNER
-    ══════════════════════════════════════════════════════ -->
+    ════════════════════════════════════════════════════ -->
     <div class="cta-banner" data-fade>
       <div class="cta-banner__inner">
         <h2 class="cta-banner__title">
@@ -383,12 +407,13 @@
         <a href="#contacto" class="btn btn--primary">Enviar WhatsApp</a>
       </div>
     </div>
+    </div>
 
 
     <!-- ══════════════════════════════════════════════════════
          CLIENTES / LOGOS
     ══════════════════════════════════════════════════════ -->
-    <section class="section section--light">
+    <section id="clientes" class="section section--light">
       <div class="container">
         <div class="section__header" data-fade>
           <span class="section__label">Ellos confían en nosotros</span>
@@ -602,6 +627,7 @@
         <nav class="footer__links" aria-label="Links rápidos">
           <a href="#nosotros"  class="footer__link">Nosotros</a>
           <a href="#servicios" class="footer__link">Servicios</a>
+          <a href="proyectos.html" class="footer__link">Proyectos</a>
           <a href="#contacto"  class="footer__link">Contacto</a>
         </nav>
       </div>

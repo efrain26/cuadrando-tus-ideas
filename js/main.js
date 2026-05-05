@@ -50,10 +50,15 @@
 
     // Encontrar la sección más cercana por encima del scroll actual
     let currentId = 'inicio';
+    const idMap = {
+      'diferenciales': 'proyectos-preview',
+      'clientes': 'proyectos-preview'
+    };
 
     sections.forEach(section => {
       if (scrollY >= section.offsetTop) {
-        currentId = section.getAttribute('id');
+        const sectionId = section.getAttribute('id');
+      currentId = idMap[sectionId] || sectionId;
       }
     });
 

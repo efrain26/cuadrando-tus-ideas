@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <!-- ── SEO ────────────────────────────────────────────── -->
+  <title>Proyectos — Cuadrando Tus Ideas</title>
+  <meta name="description" content="Conoce los proyectos realizados por Cuadrando Tus Ideas SA de CV. Soluciones estructurales y construcción." />
+
+  <!-- ── Open Graph ─────────────────────────────────────── -->
+  <meta property="og:title"       content="Proyectos — Cuadrando Tus Ideas" />
+  <meta property="og:description" content="Conoce los proyectos realizados por Cuadrando Tus Ideas SA de CV." />
+  <meta property="og:image"       content="assets/images/og-image.jpg" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="es_MX" />
+
+  <!-- ── Favicon ────────────────────────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- ── Estilos ────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Estilos de animación fade-in -->
+  <style>
+    [data-fade] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    [data-fade].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+
+       <!-- Logo -->
+       <a href="index.html" class="navbar__logo" aria-label="Ir al inicio">
+         <span>CUADRANDO<em>TUS IDEAS</em></span>
+       </a>
+
+      <!-- Menú de navegación -->
+      <nav class="navbar__menu" aria-label="Menú principal">
+
+        <div class="navbar__item">
+          <a href="index.html#inicio"   class="navbar__link">Inicio</a>
+        </div>
+
+        <div class="navbar__item">
+          <a href="index.html#nosotros"  class="navbar__link">Nosotros</a>
+        </div>
+
+        <!-- Ítem sin dropdown -->
+        <div class="navbar__item">
+          <a href="index.html#servicios" class="navbar__link">Servicios</a>
+        </div>
+
+        <div class="navbar__item">
+          <a href="proyectos.html" class="navbar__link active">Proyectos</a>
+        </div>
+
+        <div class="navbar__item">
+          <a href="index.html#contacto"  class="navbar__link">Contacto</a>
+        </div>
+      </nav>
+
+      <!-- Hamburguesa (móvil) -->
+      <button class="navbar__hamburger"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="main-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO PROYECTOS (Imagen estática con logo)
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero-projects" aria-label="Proyectos destacados">
+      <div class="hero-projects__overlay" aria-hidden="true"></div>
+      <div class="hero-projects__content">
+        <img src="assets/images/logo-cuadrando.jpg" alt="Cuadrando Tus Ideas" class="hero-projects__logo" />
+        <h1 class="hero-projects__title">Nuestros Proyectos</h1>
+        <p class="hero-projects__subtitle">
+          Conoce algunos de los trabajos que hemos desarrollado<br />
+          con excelencia y compromiso
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         GRID DE PROYECTOS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header" data-fade>
+          <span class="section__label">Portafolio</span>
+          <h2 class="section__title">Trabajos Realizados</h2>
+          <p class="section__subtitle">
+            Una muestra de nuestra experiencia en el sector industrial y comercial.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-1.jpg" alt="Proyecto 1" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-2.jpg" alt="Proyecto 2" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-3.jpg" alt="Proyecto 3" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-4.jpg" alt="Proyecto 4" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+          <!-- Proyecto 5 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-5.jpg" alt="Proyecto 5" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+          <!-- Proyecto 6 -->
+          <article class="project-card" data-fade>
+            <div class="project-card__image">
+              <img src="assets/images/proyecto-6.jpg" alt="Proyecto 6" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nombre del Proyecto</h3>
+              <p class="project-card__text">
+                Descripción breve del proyecto realizado, incluyendo el tipo de estructura,
+                metraje y cualquier detalle relevante de la ejecución.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer section--footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <!-- Columna 1: Logo + dirección -->
+      <div>
+        <a href="index.html" class="footer__logo" aria-label="Ir al inicio">
+          Cuadrando<em>TUS IDEAS</em>
+        </a>
+        <address class="footer__address">
+          Calle Cuitláhuac 104, Col. Nueva Villahermosa<br />
+          Villahermosa, Tabasco. C.P. 86070<br />
+          <a href="tel:+529931183057">993 118 3057</a>
+        </address>
+      </div>
+
+      <!-- Columna 2: Links rápidos -->
+      <div>
+        <h4 class="footer__heading">Navegación</h4>
+        <nav class="footer__links" aria-label="Links rápidos">
+          <a href="index.html#nosotros"  class="footer__link">Nosotros</a>
+          <a href="index.html#servicios" class="footer__link">Servicios</a>
+          <a href="proyectos.html" class="footer__link">Proyectos</a>
+          <a href="index.html#contacto"  class="footer__link">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- Columna 3: Redes sociales -->
+      <div>
+        <h4 class="footer__heading">Síguenos</h4>
+        <div class="footer__socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="Facebook">f</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="Instagram">in</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+             class="footer__social" aria-label="LinkedIn">Li</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer__divider" />
+    <p class="footer__copyright">
+      &copy; <span id="footer-year"></span> Cuadrando Tus Ideas SA de CV. Todos los derechos reservados.
+    </p>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       BOTÓN FLOTANTE WHATSAPP
+  ══════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/529931183057?text=Hola,%20me%20gustaría%20más%20información"
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+         viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
+               -.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075
+               -.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059
+               -.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52
+               .149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52
+               -.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51
+               -.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372
+               -.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074
+               .149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625
+               .712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413
+               .248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.5
+               a.5.5 0 0 0 .613.635l5.757-1.51A11.943 11.943 0 0 0 12 24
+               c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22
+               c-1.891 0-3.663-.516-5.179-1.415l-.371-.22-3.818 1.001.975-3.77
+               -.236-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2
+               s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
