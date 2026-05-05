@@ -764,7 +764,82 @@
 
 
 /* ------------------------------------------------------------
-   12. BOTÓN FLOTANTE WHATSAPP
+   14. CARRUSEL HERO
+   ------------------------------------------------------------ */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Botones prev/next */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  color: var(--color-white);
+  border: none;
+  font-size: 2.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.carousel__btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carousel__btn--prev { left: 16px; }
+.carousel__btn--next { right: 16px; }
+
+/* Indicadores (dots) */
+.carousel__dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.carousel__dot.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+
+/* ------------------------------------------------------------
+   15. BOTÓN FLOTANTE WHATSAPP
    ------------------------------------------------------------ */
 
 .whatsapp-btn {

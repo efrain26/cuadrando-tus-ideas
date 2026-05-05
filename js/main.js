@@ -88,8 +88,54 @@
   }
 
   /* ----------------------------------------------------------
-     4. AÑO DINÁMICO EN FOOTER
-     ---------------------------------------------------------- */
+      5. CARRUSEL HERO
+      ---------------------------------------------------------- */
+
+  const track = document.querySelector('.carousel__track');
+  const slides = document.querySelectorAll('.carousel__slide');
+  const nextBtn = document.querySelector('.carousel__btn--next');
+  const prevBtn = document.querySelector('.carousel__btn--prev');
+  const dots = document.querySelectorAll('.carousel__dot');
+
+  if (track && slides.length > 0) {
+    let current = 0;
+    let autoplayInterval;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      current = index;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+        dot.setAttribute('aria-selected', i === current);
+      });
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => goToSlide(current + 1), 5000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    nextBtn.addEventListener('click', () => { goToSlide(current + 1); resetAutoplay(); });
+    prevBtn.addEventListener('click', () => { goToSlide(current - 1); resetAutoplay(); });
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goToSlide(parseInt(dot.dataset.slide));
+        resetAutoplay();
+      });
+    });
+
+    startAutoplay();
+  }
+
+  /* ----------------------------------------------------------
+      6. AÑO DINÁMICO EN FOOTER
+      ---------------------------------------------------------- */
 
   const yearEl = document.getElementById('footer-year');
   if (yearEl) {
