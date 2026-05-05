@@ -93,8 +93,6 @@
 
   const track = document.querySelector('.carousel__track');
   const slides = document.querySelectorAll('.carousel__slide');
-  const nextBtn = document.querySelector('.carousel__btn--next');
-  const prevBtn = document.querySelector('.carousel__btn--prev');
   const dots = document.querySelectorAll('.carousel__dot');
 
   if (track && slides.length > 0) {
@@ -113,7 +111,7 @@
     }
 
     function startAutoplay() {
-      autoplayInterval = setInterval(() => goToSlide(current + 1), 5000);
+      autoplayInterval = setInterval(() => goToSlide(current + 1), 4000);
     }
 
     function resetAutoplay() {
@@ -121,8 +119,6 @@
       startAutoplay();
     }
 
-    nextBtn.addEventListener('click', () => { goToSlide(current + 1); resetAutoplay(); });
-    prevBtn.addEventListener('click', () => { goToSlide(current - 1); resetAutoplay(); });
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         goToSlide(parseInt(dot.dataset.slide));
