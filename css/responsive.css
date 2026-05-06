@@ -31,10 +31,6 @@
     gap: var(--space-xl);
   }
 
-  .footer__inner > :first-child {
-    grid-column: 1 / -1;
-  }
-
   .contact-grid {
     grid-template-columns: 1fr 1.4fr;
     gap: var(--space-xl);
