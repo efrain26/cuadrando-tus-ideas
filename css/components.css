@@ -250,9 +250,7 @@
   justify-content: center;
   text-align: center;
   color: var(--color-white);
-  background-color: var(--color-primary);
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #3a5a8a 100%);
   min-height: 70vh;
   padding-top: var(--navbar-height);
 }
